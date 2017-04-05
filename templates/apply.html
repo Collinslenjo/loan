@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+<div class="container">
+		<nav class="navbar">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="{% url 'loan' %}">Loans</a></li>
+				<li><a href="{% url 'loantype' %}">LoanTypes</a></li>
+				<li><a href="{% url 'payment' %}">Payments</a></li>
+				<li><a href="{% url 'employee' %}">Employees</a></li>
+				<li><a href="{% url 'company' %}">Company</a></li>
+			</ul>
+			<ul class="navbar-right">
+				<li><a href="/admin">Login</a></li>
+				<li><a href="admin">Register</a></li>
+			</ul>
+		</nav>
+	<div class="col-md-12">
+		<div class="row">
+			<div class="panel">
+				<div class="panel-header">
+					<h3>{{title}} Page</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
