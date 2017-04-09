@@ -2,7 +2,7 @@
 Django Python Loan system
 
 Clone the repository.
-#### Running the app
+#### Getting started
 
 Install all the requirements in your environment.
 
