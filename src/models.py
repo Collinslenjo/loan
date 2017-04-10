@@ -10,3 +10,9 @@ class Loan(models.Model):
 
 	def __unicode__(self):
 		return self.title
+
+class Apply(loans.Model):
+	# Loan Model
+	def __unicode__(self):
+		return self.title
+		
