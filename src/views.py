@@ -11,19 +11,37 @@ def index_loan(request):
 	
 #Loans for loan urlMap
 def apply_loan(request):
-	return render(request, "apply.html", {})
+	context = {
+		"title":"Apply"
+	}
+	return render(request, "apply.html", context)
 #Loan Types
 def loan_types(request):
-	return render(request, "loantypes.html", {})
+	context = {
+		"title":"Types of loans"
+	}
+	return render(request, "loantypes.html", context)
 #Payments
 def payments(request):
-	return render(request, "payments.html",{})
+	context = {
+		"title":"Payments"
+	}
+	return render(request, "payments.html",context)
 #Employees
 def employees(request):
-	return render(request, "employees.html",{})
+	context = {
+		"title":"Employees"
+	}
+	return render(request, "employees.html",context)
 #Company Setup
 def company_setup(request):
-	return render(request, "company.html",{})
+	context = {
+		"title":"Company setup"
+	}
+	return render(request, "company.html",context)
 #Borrowers
 def borrowers(request):
-	return render(request, "borrowers.html",{})
+	context = {
+	 	"title":"Borrowers"
+	}
+	return render(request, "borrowers.html",context)
