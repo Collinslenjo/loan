@@ -37,26 +37,19 @@
 					<h3>{{title}} Page</h3>
 				</div>
 				<div class="panel-subtitle">Add, Update, Read & Delete Loans</div>
-			</div>
-			<div class="col-md-6">
-				<div class="panel">
-					<button>Add Loan</button>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="panel">
-					<button>Update Loan</button>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="panel">
-					<button>View Loan</button>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="panel">
-					<button>Delete Loan</button>
-				</div>
+				<div class="panel-body">
+
+					{% for obj in Loan_list %}
+
+					<a href="{% url 'details' id=obj.id %}">{{ obj.title }}</a><br>
+					{{ obj.content }}<br>
+					{{ obj.timestamp }}<br>
+					{{ obj.updated }}<br>
+					{{ obj.id }}<br>
+
+					{% endfor %}
+
+				</div>	
 			</div>
 		</div>
 	</div>

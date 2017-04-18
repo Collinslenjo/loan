@@ -21,6 +21,7 @@ from django.contrib import admin
 from src.views import (
 	index_loan,
 	apply_loan,
+    loan_details,
     loan_types,
     payments,
     employees,
@@ -32,6 +33,7 @@ urlpatterns = [
     url(r'^$', index_loan),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^loan/apply/$', apply_loan, name='loan'),
+    url(r'^loan/details/(?P<id>\d+)/$', loan_details, name='details'),
     url(r'^loan/types/$', loan_types, name='loantype'),
     url(r'^loan/payments/$', payments, name = 'payment'),
     url(r'^loan/employees/$',employees, name = 'employee'),
@@ -40,4 +42,4 @@ urlpatterns = [
 ]
 
  # if settings.DEBUG:
- #     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+ #     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

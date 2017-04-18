@@ -1,11 +1,15 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
+
+from .models import Loan
 
 # Create your views here.
 #loan urlMaps
 def index_loan(request):
+	queryset = Loan.objects.all()
 	context = {
-			"title":"Homepage"
+			"title":"Homepage",
+			"Loan_list":queryset
 	}
 	return render(request, "index.html", context)
 	
@@ -15,6 +19,14 @@ def apply_loan(request):
 		"title":"Apply"
 	}
 	return render(request, "apply.html", context)
+#Loan Details
+def loan_details(request, id=None):
+	instance = get_object_or_404(Loan, id=id)
+	context = {
+		"title": instance.title,
+		"instance":instance
+	}
+	return render(request, "detail.html", context)
 #Loan Types
 def loan_types(request):
 	context = {
