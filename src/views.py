@@ -35,7 +35,7 @@ def loan_types(request):
 	return render(request, "loantypes.html", context)
 #Payments
 def payments(request):
-	queryset = Payments.objects.all();
+	money = Payments.objects.all();
 	context = {
 		"title":"Payments"
 	}

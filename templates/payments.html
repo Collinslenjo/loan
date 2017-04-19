@@ -33,6 +33,17 @@
 				<div class="panel-header">
 					<h3>{{title}} Page</h3>
 				</div>
+				<div class="panel-body">
+					{% for pay in pay_list %}
+
+					{{ pay.title }}<br>
+					{{ pay.amount }}<br>
+					{{ pay.timestamp }}<br>
+					{{ pay.updated }}<br>
+					{{ pay.id }}<br>
+
+					{% endfor %}
+				</div>
 			</div>
 		</div>
 	</div>
