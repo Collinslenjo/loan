@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render,get_object_or_404
 
-from .models import Loan
+from .models import Loan,Payments
 
 # Create your views here.
 #loan urlMaps
@@ -35,6 +35,7 @@ def loan_types(request):
 	return render(request, "loantypes.html", context)
 #Payments
 def payments(request):
+	queryset = Payments.objects.all();
 	context = {
 		"title":"Payments"
 	}
