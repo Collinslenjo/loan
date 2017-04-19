@@ -37,7 +37,8 @@ def loan_types(request):
 def payments(request):
 	money = Payments.objects.all();
 	context = {
-		"title":"Payments"
+		"title":"Payments",
+		"pay_list": money
 	}
 	return render(request, "payments.html",context)
 #Employees
