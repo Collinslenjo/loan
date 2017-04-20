@@ -1,5 +1,6 @@
 # loan
-Django Python Loan system  (still in beta)  
+Django Python Loan system  
+> (still in beta )  
 
 Clone the repository.
 #### Getting started
