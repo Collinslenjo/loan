@@ -38,7 +38,7 @@ def payments(request):
 	money = Payments.objects.all();
 	context = {
 		"title":"Payments",
-		"pay_list": money
+		"money":money
 	}
 	return render(request, "payments.html",context)
 #Employees

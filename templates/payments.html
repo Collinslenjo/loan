@@ -34,13 +34,13 @@
 					<h3>{{title}} Page</h3>
 				</div>
 				<div class="panel-body">
-					{% for pay in pay_list %}
+					{% for obj in money %}
 
-					{{ pay.title }}<br>
-					{{ pay.amount }}<br>
-					{{ pay.timestamp }}<br>
-					{{ pay.updated }}<br>
-					{{ pay.id }}<br>
+					{{ obj.title }}<br>
+					{{ obj.amount }}<br>
+					{{ obj.timestamp }}<br>
+					{{ obj.updated }}<br>
+					{{ obj.id }}<br>
 
 					{% endfor %}
 				</div>
