@@ -16,12 +16,15 @@ def index_loan(request):
 	
 #Loans for loan urlMap
 def apply_loan(request):
-	form = PostForm()
-	if request.method == "POST":
-		print request.POST.get('title')
-		title = request.POST.get('content')
-		Loan.objects.create(title=title)
+	form = PostForm( request.POST or None )
+	if form.is_valid():
+		instance = form.save(commit=False)
+		instance.save()
+	# if request.method == "POST":
+	# 	print request.POST.get('title')
+	# 	print request.POST.get('content')
 	context = {
+		"form": form,
 		"title":"Apply"
 	}
 	return render(request, "apply.html", context)
