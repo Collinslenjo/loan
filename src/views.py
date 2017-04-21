@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render,get_object_or_404
 
+from .forms import PostForm
 from .models import Loan,Payments
 
 # Create your views here.
@@ -15,6 +16,11 @@ def index_loan(request):
 	
 #Loans for loan urlMap
 def apply_loan(request):
+	form = PostForm()
+	if request.method == "POST":
+		print request.POST.get('title')
+		title = request.POST.get('content')
+		Loan.objects.create(title=title)
 	context = {
 		"title":"Apply"
 	}
