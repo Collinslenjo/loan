@@ -2,15 +2,15 @@
 Django Python Loan system  
 > (still in Development )  
 
-Clone the repository.
 #### Getting started
 
-Install all the requirements in your environment.
+- Clone the repository,
+- Install all the requirements in your environment.
 
-`pip install -r requirements.txt`
+- `pip install -r requirements.txt`
 
-After that, run the app using Django manage.py.
+- After that, run the app using Django manage.py.
 
-`python manage.py runserver`
+- `python manage.py runserver`
 
-Access the homepage on `http://localhost:8000`
+- Access the homepage on `http://localhost:8000`
