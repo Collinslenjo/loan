@@ -17,6 +17,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from material.frontend import urls as frontend_urls
 
 from src.views import (
 	index_loan,
@@ -39,6 +40,7 @@ urlpatterns = [
     url(r'^loan/employees/$',employees, name = 'employee'),
     url(r'^loan/company/$',company_setup, name = 'company'),
     url(r'^loan/borrowers/$', borrowers, name = 'borrower'),
+    url(r'', include(frontend_urls)),
 ]
 
  # if settings.DEBUG:
