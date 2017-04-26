@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	{% include 'material/includes/material_css.html' %}
+    {% include 'material/includes/material_js.html' %}
 </head>
 <body>
 <div id="wrapper">
@@ -34,9 +36,11 @@
 					<h3>{{title}} Page</h3>
 				</div>
 				<div class="panel-body">
-				<form method="POST" action="">{% csrf_token %}
-					{{ form.as_p }}
-					<input type="submit" value="Apply Loan">
+				{% load material_form %}
+				<form method="POST">
+				    {% csrf_token %}
+				    {% form form=form %}{% endform %}
+				    <button type="submit" name="_submit" class="btn">Apply Loan</button>
 				</form>
 				</div>
 			</div>
